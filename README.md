@@ -14,9 +14,9 @@ Follow the instructions at http://mosquitto.org/download/
 
 
 ### Setting up Node-RED
-```sudo npm install -g node-red
-node-red
-```
+Execute the following commands to install Node-RED
+    sudo npm install -g node-red
+    node-red
 
 Go to node-red_addr:1883 and start creating the links between all nodes. The following set-up is an example of a working Node-RED architecture for Domoticz to LedDomotics message delivery.
 
