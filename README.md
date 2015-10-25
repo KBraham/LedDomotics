@@ -24,7 +24,8 @@ Go to node-red_addr:1883 and start creating the links between all nodes. The fol
 
 The following function converts the Domoticz output (light level 0-31) to LedDomotics
 
-```var position = msg.payload.svalue1;
+```javascript
+var position = msg.payload.svalue1;
 var level = 0;
 if(position === 0){
     
@@ -46,7 +47,8 @@ if(position === 0){
 }
 
 level = Math.floor(level);
-return {"payload": {"led":2, "l": level, "ft": 1000}};```
+return {"payload": {"led":2, "l": level, "ft": 1000}};
+```
 
 In this message `led` refers to the output pin of the ESP, `l` is the PWM level ranging from 0 to 1023 and `ft` is the fadetime, the effective time to use for a transition between levels.
 
