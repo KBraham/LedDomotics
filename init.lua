@@ -1,0 +1,1 @@
+tmr.alarm(0,3000,0,function() dofile("init2.lua") end)
