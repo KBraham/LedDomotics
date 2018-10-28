@@ -1,13 +1,18 @@
 # LedDomotics
 Configuration to connect ESP modules to Domotics
 
-
 ## Installation
 To install LedDomotics the following components are required:
 
 - A MQTT broker (http://mosquitto.org)
 - Node-RED wiring tools (http://nodered.org)
+
+For NodeMCU boards:
+
 - NodeMCU (https://github.com/nodemcu/nodemcu-firmware)
+
+For the H801 box:
+- Arduino IDE with ESP8266 support and MQTT library
 
 ### MQTT
 Follow the instructions at http://mosquitto.org/download/
