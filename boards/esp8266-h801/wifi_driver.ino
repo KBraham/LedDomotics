@@ -1,4 +1,4 @@
-/*
+/**
  Wifi driver board using the ESP8266 on a H801 WIFI LED Controller
 
  Make sure you install the ESP8266 board:
@@ -87,6 +87,9 @@ void setup_wifi() {
   Serial1.println(WiFi.localIP());
 }
 
+/**
+Update led status to new value
+**/
 void set_led_status(uint8_t led, bool status) {
   led_status[led] = status;
   Serial1.print("Led status ");
@@ -106,6 +109,9 @@ void set_led_status(uint8_t led, bool status) {
   client.publish(topic, String(led_status[led]).c_str());
 }
 
+/**
+Update led brightness to new value
+**/
 void set_led_brightness(uint8_t led, uint16_t status) {
   led_brightness[led] = status;
   short difference = led_brightness[led] - led_brightness_current[led];
