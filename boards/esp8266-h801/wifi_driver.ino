@@ -64,6 +64,9 @@ bool  led_status[5] = {0};
 short led_fade_time = 200;
 uint8_t led_pins[] = {led_pin_red, led_pin_blue, led_pin_green, led_pin_w1, led_pin_w2};
 
+/**
+Start WiFi connection
+**/
 void setup_wifi() {
 
   delay(10);
@@ -169,6 +172,9 @@ void check_leds() {
   }
 }
 
+/**
+Called on each message from broker to device
+**/
 void callback(char* topic, byte* payload, unsigned int length) {
   Serial1.print("Message arrived [");
   Serial1.print(topic);
